@@ -1,0 +1,143 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Montserrat&display=swap');
+
+:root{  /*enlaza todo las variables para futuros cambios*/
+    --color-primario:#000000;
+    --color-segundario:#f6f6f6;
+    --color-terciario: #22d4f2;
+    --color-hover: #272727;
+
+    --fuente-montserrat: 'montserrat', sans serif;
+    --fuente-Krona: 'Krona', sans serif;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    background-color: var(--color-primario);
+    color: var(--color-segundario);
+    box-sizing: border-box;
+}
+
+.header{
+    padding: 2% 0% 0% 15%;  /*arriba abajo derecha izquierda*/
+}
+
+.header__menu{
+    display: flex;
+    gap: 80px;
+}
+
+.header__menu__link{   /*menus*/
+    font-family: var(--fuente-montserrat);
+    font-size: 1.5rem;
+    font-weight: 600;
+    color:  var(--color-terciario);
+    gap: 60;
+    text-decoration: none;
+
+}
+
+.tituloDestaque{
+    color:aqua;
+}
+.presentación{
+    display: flex;  /*flex para encajar los diferentes msm de la web*/
+    align-items: center;
+    padding: 7% 15%; /*ajuste de texto a pantalla*/
+    justify-content: space-between;
+    gap: 82px;
+    
+}
+
+.presentación__contenido{ /*fexbox para dar orden a las cajas de la web*/
+    width: 50%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    gap:40px; /* Esta propiedad especifica en CSS el tamaño de los espacios entre filas y columnas*/
+}
+
+.presentacion__enlaces{
+    display: flex;
+    justify-content:space-between;
+    flex-direction: column;  /*eje de botones vertical*/
+    align-items: center;
+    gap: 32px; /*para crear espacio entre botones*/
+}
+.presentacion__Contenido__titulo{
+    font-size: 1.5rem;
+    font-family: var(--fuente-Krona);
+}
+
+.presentacion__contenido__texto{
+    font-size: 1.5rem;
+    font-family: var(--fuente-montserrat);
+    text-align: justify;
+    word-spacing: 0.001em;
+    letter-spacing: .005em;
+}
+
+.presentacion__enlaces__link{ /*instalar botones*/
+    width: 50%;
+    text-align: center;
+    padding: 21.5px 0;
+    border-radius: 8px;
+    font-family: var(--fuente-montserrat);
+    font-size: 1.5rem;
+    font-weight: 600;
+    text-decoration: none;  /*quita decoracion que no queremos en los botones*/
+    color: var(--color-segundario);
+    border: 2px solid var(--color-terciario);
+    display: flex; /*ajustar texto "derecha"*/
+    justify-content: center; /*centrar contenido*/
+    gap: 10px;  /*crear espacio*/
+}
+
+.presentacion__enlaces__subtitulo{
+    font-family: var(--fuente-Krona);
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+.presentacion__enlaces__link:hover{ /*hover para cambiar el color del boton al pasar el cursor*/
+
+    background-color: var(--color-hover);
+}
+
+.presentacion__imagen{  /*paraacomodar el frond a las pantalas*/
+    width: 50%;
+}
+
+.footer{ /*pie de pagina*/
+    background-color: var(--color-terciario);
+    padding: 1.5rem;
+    color: var(--color-primario);
+    text-align: center;
+    font-family: var(--fuente-montserrat);
+    font-size: 1.5rem;
+    font-weight: 400;
+
+}
+
+ @media (max-width:1200px ){   /*configurar la imagen segun el tamaño del screen*/
+
+    .header{
+        padding: 10%;
+    }
+
+    .header__menu{
+        justify-content: center; /*centrar botones*/
+    }
+
+    .presentación{
+        flex-direction: column-reverse;
+        padding: 5%;
+    }
+
+    .presentación__contenido{
+        width: auto;
+    }
+}
